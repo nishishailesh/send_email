@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+#For python root user is socket connected at 127.0.0.1, not by tcp
+#so root user at 127.0.0.1 will not work
+#Create new  user instead for working with email database
+
+my_user='mysql email database user'
+my_pass='password for above'
+smtp_email='SMARTHOST email'
+smtp_pass='password for above'
+my_email_server='127.0.0.1'
+
+#Example of /var/gmcs_config/my_pass.py 
+
+
+
