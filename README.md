@@ -1,6 +1,6 @@
 # send_email
 
-file structure\\
+file structure\
 ==============\\
 total 20\\
 -rw-r--r-- 1 root root  259 Oct  6 15:27 cron.script  	(example for using python script in crontab)
