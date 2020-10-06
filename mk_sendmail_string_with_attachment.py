@@ -5,28 +5,9 @@ import logging, sys, MySQLdb
 
 sys.path.append('/var/gmcs_config')
 import my_pass
-#print(dir(my_pass))
-
-'''
-CREATE TABLE `email` (
-  `id` int(11) NOT NULL,
-  `to` varchar(100) DEFAULT NULL,
-  `subject` varchar(200) DEFAULT NULL,
-  `content` varchar(6000) DEFAULT NULL,
-  `sent` int(11) DEFAULT NULL,
-  `sms` bigint(20) DEFAULT NULL,
-  `sms_sent` int(11) DEFAULT NULL,
-  `att` mediumblob DEFAULT NULL,
-  `att_name` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-in email database to access email data
-
-'''
 
 #######Functions########
 def get_link(my_host,my_user,my_pass,my_db):
-  #con=MySQLdb.connect(host=my_host,user=my_user,passwd=my_pass,db=my_db)
   con=MySQLdb.connect(my_host,my_user,my_pass,my_db)
   logging.debug(con)
   if(con==None):
@@ -66,15 +47,14 @@ if log==0:
   logging.disable(logging.CRITICAL)
 
 ######Get mysql link######
-conn=get_link(my_pass.my_email_server,my_pass.my_user,my_pass.my_pass,'email')
+conn=get_link('11.207.1.1',my_pass.my_user,my_pass.my_pass,'email')
 sql='select * from email where sent=%s'
 data_tuple=(0,)
 cur=run_query(conn,sql,data_tuple)
 one_record=get_single_row(cur)
 while one_record !=None:
   #print(one_record)
-  #27746, 'biochemistrygmcs@gmail.com', 'Biochemistry Sample_ID:1000102', '<h5>Please Find the report attached herewith', 0, 0, 0, b'%PDF-1.
-  #smtp.gmail.com:deangmcs@gmail.com:srcec@007
+  #smtp.gmail.com:xyz@gmail.com:password
   email_db_id=one_record[0]
   email=one_record[1]
   subject=one_record[2]

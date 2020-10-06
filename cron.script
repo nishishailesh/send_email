@@ -1,0 +1,2 @@
+1	8,20	*	*	*	/root/backup/script/backup.main 1>>/root/backup/script/backup.log 2>>/root/backup/script/backup.log
+*/30	*	*	*	*	/root/backup/script/my_email/mk_sendmail_string_with_attachment.py 1>>/root/backup/script/email.log 2>>/root/backup/script/email.log
