@@ -11,9 +11,17 @@ total 20\
 
 implement
 ===========
+*preparation*
+it works with gmail.\
+go to google apps (9 dots icon on left)\
+go to *account -> security -> less secure apps* -> turn it on\
+
+
 create a database called email (see email.sql)\
 create a file (e.g my_pass.py) somewhere at a secure place\
 edit mk_sendmail_string_with_attachment.py to update password file path\
+change mysql server ip (e.g 127.0.0.1 if on same computer as this script)
+
 fill database with some data\
 try to run the script\
 check emails\
