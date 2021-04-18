@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 
+my_host='127.0.0.1'
 my_user='mysql email database user'
 my_pass='password for above'
+smtp_host='smtp.gmail.com'
 smtp_email='SMARTHOST email'
 smtp_pass='password for above'
 
-
-Example of /var/gmcs_config/my_pass.py 
+#Example of /var/gmcs_config/my_pass.py 
 
 
 

@@ -47,7 +47,7 @@ if log==0:
   logging.disable(logging.CRITICAL)
 
 ######Get mysql link######
-conn=get_link('11.207.1.1',my_pass.my_user,my_pass.my_pass,'email')
+conn=get_link(my_pass.my_host,my_pass.my_user,my_pass.my_pass,'email')
 sql='select * from email where sent=%s'
 data_tuple=(0,)
 cur=run_query(conn,sql,data_tuple)
@@ -63,7 +63,7 @@ while one_record !=None:
   attachment_name=one_record[8]
   #print (email,subject,content)
   print (email)
-  with SMTP("smtp.gmail.com") as smtp:
+  with SMTP(my_pass.smtp_host) as smtp:
     smtp.starttls()
     smtp.login(my_pass.smtp_email,my_pass.smtp_pass)
     try:
@@ -73,7 +73,7 @@ while one_record !=None:
       msg = EmailMessage()
       msg['Subject'] = subject
       msg['To'] = email
-      msg['From'] = 'email@email.com'
+      msg['From'] = 'email@email.exp'
       msg.add_alternative(content, subtype='html')
       if(attachment):
         msg.add_attachment(attachment,maintype='application',subtype='octet-stream',filename=attachment_name)
