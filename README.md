@@ -7,7 +7,7 @@ total 20\
 -rw-r--r-- 1 root root 1898 Oct  6 15:29 email.sql	(blank database of email, read by the script to send email)\
 -rwxr-xr-x 1 root root 2594 Oct  6 15:27 mk_sendmail_string_with_attachment.py	(main script)\
 -rw-r--r-- 1 root root  190 Oct  6 15:27 my_pass.py.example	(example for storing database details)\
--rw-r--r-- 1 root root   13 Oct  6 15:27 README.md	(This file)\
+-rw-r--r-- 1 root root   13 Oct  6 15:27 README.md	(This file)
 
 implement
 ===========
