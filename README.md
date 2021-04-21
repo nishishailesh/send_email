@@ -27,6 +27,8 @@ try to run the script\
 check emails\
 update crontab file to execute periodically\
 
+in debian 10, SMTP and SMTP_SSL worked.
+in ubuntu (2021) only SMTP_SSL worked
 general use
 ===========
 to divert messages from all applications to this database\
