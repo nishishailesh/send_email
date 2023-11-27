@@ -59,8 +59,8 @@ while one_record !=None:
   email=one_record[1]
   subject=one_record[2]
   content=one_record[3]
-  attachment=one_record[7]
-  attachment_name=one_record[8]
+  attachment=one_record[4]
+  attachment_name=one_record[5]
   #print (email,subject,content)
   print (email)
   with SMTP_SSL(my_pass.smtp_host) as smtp:

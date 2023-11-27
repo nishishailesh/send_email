@@ -1,9 +1,9 @@
 #!/bin/bash
 #only blank
-echo 'Give mysql password'
-read password
+echo 'Give mysql username'
+read username
 
-mysqldump  -d -uroot email -p$password > email_blank.sql
+mysqldump  -d -u$username  -p email > email_blank.sql
 
 git add *
 git commit -a

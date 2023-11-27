@@ -1,8 +1,8 @@
--- MySQL dump 10.17  Distrib 10.3.23-MariaDB, for debian-linux-gnu (x86_64)
+-- MariaDB dump 10.19  Distrib 10.11.3-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: email
 -- ------------------------------------------------------
--- Server version	10.3.23-MariaDB-0+deb10u1
+-- Server version	10.11.3-MariaDB-1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,15 +25,13 @@ DROP TABLE IF EXISTS `email`;
 CREATE TABLE `email` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `to` varchar(100) NOT NULL,
-  `subject` varchar(200) NOT NULL,
-  `content` varchar(10000) NOT NULL,
-  `sent` int(11) NOT NULL,
-  `sms` bigint(20) NOT NULL,
-  `sms_sent` int(11) NOT NULL,
+  `subject` varchar(200) DEFAULT NULL,
+  `content` varchar(10000) DEFAULT NULL,
   `att` mediumblob DEFAULT NULL,
   `att_name` varchar(200) DEFAULT NULL,
+  `sent` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53363 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=53372 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -45,4 +43,4 @@ CREATE TABLE `email` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-22  0:00:19
+-- Dump completed on 2023-11-27 21:27:16

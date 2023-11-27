@@ -8,6 +8,3 @@ smtp_email='SMARTHOST email'
 smtp_pass='password for above'
 
 #Example of /var/gmcs_config/my_pass.py 
-
-
-
