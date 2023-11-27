@@ -7,5 +7,5 @@ mysqldump  -d -u$username  -p email > email_blank.sql
 
 git add *
 git commit -a
-git push https://github.com/nishishailesh/send_email master
+git push https://github.com/nishishailesh/send_email main
 
