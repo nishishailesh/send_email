@@ -1,0 +1,10 @@
+[Unit]
+Description=read mysql data and email
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/root/send_email/mysql_to_email_loop.py
+
+[Install]
+WantedBy=multi-user.target

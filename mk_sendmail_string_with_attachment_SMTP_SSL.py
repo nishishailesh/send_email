@@ -4,7 +4,7 @@ from email.message import EmailMessage
 import logging, sys, MySQLdb
 
 sys.path.append('/var/gmcs_config')
-import my_pass
+import astm_var_clg as my_pass
 
 #######Functions########
 def get_link(my_host,my_user,my_pass,my_db):
@@ -47,7 +47,7 @@ if log==0:
   logging.disable(logging.CRITICAL)
 
 ######Get mysql link######
-conn=get_link(my_pass.my_host,my_pass.my_user,my_pass.my_pass,'email')
+conn=get_link(my_pass.my_host,my_pass.my_user,my_pass.my_pass,my_pass.my_db)
 sql='select * from email where sent=%s'
 data_tuple=(0,)
 cur=run_query(conn,sql,data_tuple)
