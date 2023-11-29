@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+my_db='database with email table'
 my_host='127.0.0.1'
 my_user='mysql email database user'
 my_pass='password for above'
